@@ -1,0 +1,24 @@
+%bevel-text-wht {
+  color: white;
+  text-shadow:
+    1px  1px  0   #5e555b,
+    1px  0    0   #5e555b,
+    0    1px  0   #5e555b,
+    -1px -1px 1px #c1b8c7,
+    -1px 0    1px #c1b8c7,
+    0   -1px  1px #c1b8c7,
+    2px  2px  0   #c1b8c7,
+    2px  0    0   #c1b8c7,
+    0    2px  0   #c1b8c7;
+}
+
+%full-view {
+  height: 100vh;
+  width: 100vw;
+}
+
+%perfect-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

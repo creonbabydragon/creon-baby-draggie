@@ -1,0 +1,89 @@
+@use '_placeholders.scss';
+
+.pattern-dots {
+  background-image: radial-gradient(circle, #f1ebf0 0, transparent 30%);
+  background-size: 8px 8px;
+}
+
+/* Title */
+
+.title {
+  @extend %bevel-text-wht;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+@media (min-width: 300px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .title {
+    margin-bottom: 0;
+  }
+}
+
+/* Layout */
+
+.background-layer-starburst {
+  @extend %full-view;
+  @extend %perfect-center;
+  filter: drop-shadow(0 2px 0 #ecdfe8);
+  overflow: hidden;
+  position: absolute;
+}
+
+.background-layer-starburst > svg {
+  transform: scale(5);
+  height: 100vmax;
+  width: 100vmax;
+}
+
+.foreground {
+  @extend %full-view;
+  @extend %perfect-center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Creon Character */
+
+.baby_creon {
+  box-sizing: border-box;
+  display: block;
+  justify-self: center;
+  padding: 0.5rem 1.5rem;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.shadow-ellipse {
+  position: relative;
+}
+
+.shadow-ellipse::before {
+  background: rgba(131, 85, 116, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 5px 5px rgba(131, 85, 116, 0.15),
+    0 0 8px 8px rgba(131, 85, 116, 0.05);
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.shadow-ellipse::before {
+  transform: rotate(1.5deg);
+  left: 10%;
+  bottom: 2.5%;
+  height: 4.5%;
+  width: 67%;
+}

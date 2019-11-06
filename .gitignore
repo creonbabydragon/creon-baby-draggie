@@ -1,0 +1,6 @@
+# Project
+/dist
+
+# Node Package Manager
+/package-lock.json
+/node_modules
