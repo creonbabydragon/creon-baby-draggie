@@ -2,7 +2,7 @@ const { Navigation, Footer } = require('../components')
 
 class About {
   constructor() {
-    this.fileName = 'about.html'
+    this.fileName = 'about/index.html'
   }
 
   render() {
