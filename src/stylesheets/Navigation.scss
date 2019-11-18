@@ -1,6 +1,49 @@
+@use '_resets.scss';
+
 .navigation {
   background-color: white;
   border-bottom: 1px solid #e3d7df;
   box-shadow: 0 0 0.375rem rgba(202, 178, 193, 0.375);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.75rem;
   height: 4rem;
+}
+
+.nav_links {
+  @extend %reset-ul;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_link,
+.nav_logo {
+  @extend %reset-a;
+  cursor: pointer;
+  display: block;
+}
+
+.nav_link {
+  padding: 0.5rem;
+  font-style: italic; // style the Links Coming Soon text
+}
+
+.nav_link[href] {
+  color: #c7802a;
+  font-style: normal;
+}
+
+.nav_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Maven Pro', system-ui;
+}
+
+.nav_logo img {
+  margin-right: 0.375rem;
+  width: 4rem;
 }

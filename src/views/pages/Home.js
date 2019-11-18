@@ -17,7 +17,7 @@ class Home {
       <link rel="canonical" href="https://creon.babydraggie.com/${fileName}">
       <title>Creon The Draggie's Website</title>
 
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Open+Sans:400,400i,700,700i&display=swap">
       <link rel="stylesheet" href="/assets/css/global.css">
       <link rel="stylesheet" href="/assets/css/home.css">
 
