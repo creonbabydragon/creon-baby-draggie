@@ -4,8 +4,7 @@
   "description": "",
   "main": "project.js",
   "scripts": {
-    "build": "grunt build",
-    "serve": "grunt build && serve dist"
+    "build": "grunt build"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +33,6 @@
     "path": "^0.12.7",
     "pixrem": "^5.0.0",
     "sass": "^1.23.3",
-    "serve": "^11.2.0",
     "shelljs": "^0.8.3"
   }
 }
