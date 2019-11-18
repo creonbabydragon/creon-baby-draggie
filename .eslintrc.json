@@ -11,6 +11,7 @@
   "rules": {
     "brace-style": ["error", "stroustrup"],
     "comma-dangle": ["error", "always-multiline"],
+    "indent": ["error", 2],
     "key-spacing": ["error", {
       "beforeColon": false,
       "afterColon": true,
@@ -38,6 +39,7 @@
       "varsIgnorePattern": "^_"
     }],
     "semi": ["error", "never"],
+    "quote-props": ["error", "as-needed"],
     "quotes": ["error", "single", {
       "avoidEscape": false,
       "allowTemplateLiterals": false
