@@ -22,3 +22,20 @@
   align-items: center;
   justify-content: center;
 }
+
+%sticky-footer {
+  display: flex;
+  flex-direction: column;
+
+  & > header,
+  & > nav,
+  & > footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  & > main {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}

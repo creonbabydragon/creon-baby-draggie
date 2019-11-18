@@ -1,5 +1,9 @@
 @use '_placeholders.scss';
 
+body {
+  @extend %sticky-footer;
+}
+
 .pattern-dots {
   background-image: radial-gradient(circle, #f1ebf0 0, transparent 30%);
   background-size: 8px 8px;
@@ -37,6 +41,7 @@
   filter: drop-shadow(0 2px 0 #ecdfe8);
   overflow: hidden;
   position: absolute;
+  z-index: -1;
 }
 
 .background-layer-starburst > svg {
@@ -46,7 +51,6 @@
 }
 
 .foreground {
-  @extend %full-view;
   @extend %perfect-center;
   flex-direction: column;
   position: relative;

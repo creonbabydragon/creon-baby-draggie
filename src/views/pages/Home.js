@@ -1,3 +1,5 @@
+const { Navigation } = require('../components')
+
 class Home {
   constructor() {
     this.fileName = 'index.html'
@@ -23,6 +25,7 @@ class Home {
       <script src="/assets/js/home.js" defer></script>
     </head>
     <body>
+      ${Navigation()}
       <div class="background-layer-starburst">
         <svg fill="#F6F0F4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432">
         <polygon points="250.7, -56.7 181.3, -56.7 216, 216"/>
@@ -40,12 +43,12 @@ class Home {
         </svg>
       </div>
 
-      <div class="foreground">
+      <main class="foreground">
         <h1 class="title">Creon The Draggie</h1>
         <div class="shadow-ellipse">
           <img class="baby_creon" src="/assets/images/baby_creon.png">
         </div>
-      </div>
+      </main>
     </body>
     </html>
     `
