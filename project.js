@@ -1,7 +1,7 @@
 const project = {
   paths: {
     dist: 'dist',
-    pages: 'src/components/pages',
+    pages: 'src/views/pages',
     server: 'https://creon.babydraggie.com',
   },
   scripts: {

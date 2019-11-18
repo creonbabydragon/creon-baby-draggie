@@ -1,4 +1,4 @@
-const { Navigation, Footer } = require('../')
+const { Navigation, Footer } = require('../components')
 
 class About {
   constructor() {
