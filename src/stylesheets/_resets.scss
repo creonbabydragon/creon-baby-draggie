@@ -1,0 +1,49 @@
+%reset-inheritable {
+  color: inherit;
+  cursor: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  text-decoration: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+}
+
+%reset-a {
+  @extend %reset-inheritable;
+
+  &:hover {
+    text-transform: inherit;
+  }
+}
+
+%reset-ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+%reset-button {
+  @extend %reset-inheritable;
+
+  background-color: initial;
+  border: initial;
+  padding: initial;
+  text-align: initial;
+}
+
+%reset-hr {
+  @extend %reset-inheritable;
+
+  background-color: initial;
+  border: initial;
+  height: initial;
+  margin: 0;
+}
+
+%reset-input {
+  @extend %reset-inheritable;
+
+  background-color: initial;
+  border: initial;
+}
