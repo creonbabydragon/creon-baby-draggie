@@ -3,7 +3,7 @@ const project = require('../project')
 const { stylesheets } = project
 
 // Grunt code
-module.exports = (grunt) => {
+module.exports = grunt => {
   grunt.registerTask('build:sass', 'Pre-process Sass with Babel', () => {
     grunt.config.merge({
       sass: {

@@ -7,7 +7,7 @@ const project = require('../project')
 const postProcessors = [pixrem, autoprefixer, cssnano]
 const { stylesheets } = project
 
-module.exports = (grunt) => {
+module.exports = grunt => {
   grunt.registerTask('postprocess:css', 'Process CSS with Stylus and PostCSS', () => {
     grunt.config.merge({
       postcss: {

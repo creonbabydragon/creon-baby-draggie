@@ -13,7 +13,7 @@
 */
 
 function render(Component) {
-  return function (properties) {
+  return function(properties) {
     const instance = new Component(properties)
     return instance.render()
   }

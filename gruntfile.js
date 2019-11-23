@@ -6,7 +6,7 @@
 // minify:html     × tasks/minify-html.js
 // postprocess:css × tasks/post-process-css.js
 
-module.exports = (grunt) => {
+module.exports = grunt => {
   grunt.loadTasks('./tasks')
 
   grunt.registerTask('build:css', ['build:sass', 'postprocess:css'])

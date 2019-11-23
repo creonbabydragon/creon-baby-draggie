@@ -13,12 +13,12 @@
 //   { key: "alt", value: "A happy kitten in a Santa hat" }
 // ]
 
-const convertObjectToArray = (object) => (
+const convertObjectToArray = object => (
   Object.keys(object)
     // object keys are typically ordered, but sometimes there can be quirks,
     // especially when converting from JSON
     .sort()
-    .map((key) => ({ key, value: object[key] }))
+    .map(key => ({ key, value: object[key] }))
 )
 
 module.exports = convertObjectToArray

@@ -7,7 +7,7 @@ const getDirectoryFromPath = require('./lib/getDirectoryFromPath')
 const { staticContent } = project
 const { dist } = project.paths
 
-module.exports = (grunt) => {
+module.exports = grunt => {
   function copyFile(path) {
     const [distPath, srcPath] = [path.key, path.value]
 

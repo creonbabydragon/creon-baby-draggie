@@ -5,8 +5,8 @@ const project = require('../project')
 const { pages, dist } = project.paths
 const pagesDirectory = path.join(__dirname, `../${pages}`)
 
-module.exports = (grunt) => {
-  fs.readdirSync(pagesDirectory).map((file) => `${dist}/${file}`)
+module.exports = grunt => {
+  fs.readdirSync(pagesDirectory).map(file => `${dist}/${file}`)
 
   grunt.registerTask('minify:html', 'Minify HTML Files', () => {
     grunt.config.merge({

@@ -3,7 +3,7 @@ const project = require('../project')
 const { scripts } = project
 
 // Grunt code
-module.exports = (grunt) => {
+module.exports = grunt => {
   grunt.registerTask('build:js', 'Transpile JS with Babel/Babelify', () => {
     // Use babel with babelify/grunt-browserify to transpile JavaScript
     grunt.config.merge({

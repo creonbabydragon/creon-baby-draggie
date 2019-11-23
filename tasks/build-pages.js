@@ -10,9 +10,9 @@ const pagesDirectory = path.join(__dirname, `../${pages}`)
 
 
 // Grunt code
-module.exports = (grunt) => {
+module.exports = grunt => {
   grunt.registerTask('build:pages', 'Build pages', () => {
-    fs.readdirSync(pagesDirectory).forEach((file) => {
+    fs.readdirSync(pagesDirectory).forEach(file => {
       const Page = require(`../${pages}/${file}`)
       const Component = new Page()
 
