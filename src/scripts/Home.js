@@ -1,4 +1,5 @@
 const RotatingBurst = require('../lib/RotatingBurst')
 
-const starburst = new RotatingBurst('.background-layer-starburst > svg', (1 / 30))
+const RPS = 1 / 30 // rotations per second
+const starburst = new RotatingBurst('.background-layer-starburst > svg', RPS)
 starburst.start()
