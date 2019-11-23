@@ -1,14 +1,16 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "extends": [ "airbnb" ],
   "parserOptions": {
     "sourceType": "module"
   },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "node": true
+  },
+  "extends": [ "airbnb" ],
   "rules": {
+    "arrow-parens": [ "error", "as-needed"],
     "brace-style": ["error", "stroustrup"],
     "comma-dangle": ["error", "always-multiline"],
     "indent": ["error", 2],
@@ -38,7 +40,9 @@
       "argsIgnorePattern": "^_",
       "varsIgnorePattern": "^_"
     }],
+    "no-useless-concat": "error",
     "semi": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
     "quote-props": ["error", "as-needed"],
     "quotes": ["error", "single", {
       "avoidEscape": false,
