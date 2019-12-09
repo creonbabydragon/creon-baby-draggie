@@ -3,7 +3,7 @@ const project = {
     dist: 'dist',
     source: 'src',
     pages: 'src/views/pages',
-    server: 'https://creon.babydraggie.com',
+    host: 'https://creon.babydraggie.com',
   },
   scripts: {
     'dist/assets/js/main.js': 'src/scripts/main.js',

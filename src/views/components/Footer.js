@@ -1,9 +1,5 @@
-class Footer {
-  render() {
-    return `
-      <footer></footer>
-    `
-  }
-}
+const Footer = () => `
+  <footer></footer>
+`
 
 module.exports = Footer

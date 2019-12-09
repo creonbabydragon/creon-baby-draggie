@@ -1,4 +1,4 @@
-const { Navigation } = require('../components')
+const { Navigation, Head } = require('../components')
 
 class Home {
   constructor() {
@@ -11,19 +11,14 @@ class Home {
     return `
     <!DOCTYPE html>
     <html lang="en-US">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="canonical" href="https://creon.babydraggie.com/${fileName}">
-      <title>Creon The Draggie's Website</title>
-
+    ${Head({
+      title: 'Creon’s Website',
+      canonical: fileName,
+      content: `
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Open+Sans:400,400i,700,700i&display=swap">
-      <link rel="stylesheet" href="/assets/css/global.css">
       <link rel="stylesheet" href="/assets/css/home.css">
-
-      <script src="/assets/js/global.js" defer></script>
-      <script src="/assets/js/home.js" defer></script>
-    </head>
+      <script src="/assets/js/home.js" defer></script>`,
+    })}
     <body>
       ${Navigation()}
       <div class="background-layer-starburst">

@@ -1,4 +1,3 @@
-const { render } = require('../../lib')
-
-module.exports.Footer = render(require('./Footer'))
-module.exports.Navigation = render(require('./Navigation'))
+module.exports.Footer = require('./Footer')
+module.exports.Head = require('./Head')
+module.exports.Navigation = require('./Navigation')
