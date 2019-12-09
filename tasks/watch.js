@@ -7,16 +7,15 @@ module.exports = grunt => {
   grunt.registerTask('watch:src', 'Serve the project', () => {
     grunt.config.merge({
       watch: {
-        options: {
-          livereload: true,
-        },
-        css: {
-          files: Object.values(stylesheets),
-          tasks: ['build:css'],
-        },
-        js: {
-          files: Object.values(scripts),
-          tasks: ['build:js'],
+        configFiles: {
+          files: [
+            ...Object.values(stylesheets),
+            ...Object.values(scripts),
+          ],
+          tasks: ['build'],
+          options: {
+            livereload: true,
+          },
         },
       },
     })
