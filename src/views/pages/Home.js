@@ -6,18 +6,18 @@ class Home {
   }
 
   render() {
-    const { fileName } = this
-
     return `
     <!DOCTYPE html>
     <html lang="en-US">
     ${Head({
       title: 'Creon’s Website',
-      canonical: fileName,
-      content: `
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Open+Sans:400,400i,700,700i&display=swap">
-      <link rel="stylesheet" href="/assets/css/home.css">
-      <script src="/assets/js/home.js" defer></script>`,
+      canonical: this.fileName,
+      stylesheets: [
+        'https://fonts.googleapis.com/css?family=Maven+Pro:900|Open+Sans:400,400i,700,700i&display=swap',
+        '/assets/css/home.css',
+      ],
+      scripts: ['/assets/js/home.js'],
+      content: '',
     })}
     <body>
       ${Navigation()}

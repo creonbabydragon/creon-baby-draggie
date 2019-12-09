@@ -1,16 +1,13 @@
 const shell = require('shelljs')
 
 const project = require('../project')
-const convertObjectToArray = require('./lib/convertObjectToArray')
 const getDirectoryFromPath = require('./lib/getDirectoryFromPath')
 
 const { staticContent } = project
 const { dist } = project.paths
 
 module.exports = grunt => {
-  function copyFile(path) {
-    const [distPath, srcPath] = [path.key, path.value]
-
+  function copyFile([distPath, srcPath]) {
     if (grunt.file.exists(srcPath)) {
       const distDirectory = getDirectoryFromPath(distPath)
       if (!grunt.file.exists(distDirectory)) shell.mkdir('-p', distDirectory)
@@ -19,7 +16,7 @@ module.exports = grunt => {
   }
 
   grunt.registerTask('copy:files', `Copy files to ${dist}`, () => {
-    const content = convertObjectToArray(staticContent)
+    const content = Object.entries(staticContent)
     content.forEach(copyFile)
   })
 }

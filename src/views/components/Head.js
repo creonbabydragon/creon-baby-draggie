@@ -1,8 +1,27 @@
+/* eslint-disable prefer-template */
 const project = require('../../../project')
 
 const { host } = project.paths
 
-const Head = ({ content, canonical, title }) => `
+const Head = properties => {
+  const {
+    canonical,
+    content,
+    title,
+    stylesheets: _stylesheets,
+    scripts: _scripts,
+  } = properties
+
+  const stylesheets = ['/assets/css/main.css', ..._stylesheets]
+  const scripts = ['/assets/js/main.js', ..._scripts]
+
+  const stylesheetsHTML = stylesheets
+    .reduce((HTML, href) => HTML + `<link rel="stylesheet" href="${href}">`, '')
+
+  const scriptsHTML = scripts
+    .reduce((HTML, src) => HTML + `<script src="${src}" defer></script>`, '')
+
+  return `
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +29,13 @@ const Head = ({ content, canonical, title }) => `
       rel="canonical"
       href="${canonical.includes('//') ? canonical : `${host}/${canonical}`}"
     >
-
     <title>${title ? `${title} | ` : ''}creon.babydraggie.com</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/main.js" defer></script>
+
+    ${stylesheetsHTML}
+    ${scriptsHTML}
     ${content || ''}
   </head>
 `
+}
 
 module.exports = Head
