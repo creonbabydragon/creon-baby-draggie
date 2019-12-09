@@ -9,10 +9,9 @@ module.exports = grunt => {
       connect: {
         server: {
           options: {
-            base: dist,
-            keepalive: true,
-            livereload: true,
             port: 9000,
+            base: dist,
+            livereload: true,
           },
         },
       },

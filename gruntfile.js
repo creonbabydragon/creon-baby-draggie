@@ -12,7 +12,7 @@ module.exports = grunt => {
   grunt.registerTask('build:css', ['build:sass', 'postprocess:css'])
   grunt.registerTask('build:html', ['build:pages', 'minify:html'])
   grunt.registerTask('build', ['clean', 'copy:files', 'build:css', 'build:js', 'build:html'])
-  grunt.registerTask('serve', ['build', 'serve:dist'])
+  grunt.registerTask('serve', ['build', 'serve:dist', 'watch:src'])
 
   grunt.registerTask('default', ['build'])
 }
