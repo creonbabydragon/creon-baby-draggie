@@ -1,6 +1,6 @@
 const project = require('../project')
 
-const { scripts, stylesheets } = project
+const { source } = project.paths
 
 // Grunt code
 module.exports = grunt => {
@@ -8,10 +8,7 @@ module.exports = grunt => {
     grunt.config.merge({
       watch: {
         configFiles: {
-          files: [
-            ...Object.values(stylesheets),
-            ...Object.values(scripts),
-          ],
+          files: `${source}/**`,
           tasks: ['build'],
           options: {
             livereload: true,
