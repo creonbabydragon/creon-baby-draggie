@@ -13,7 +13,7 @@
     "arrow-parens": [ "error", "as-needed"],
     "brace-style": ["error", "stroustrup"],
     "comma-dangle": ["error", "always-multiline"],
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "ignoredNodes": ["TemplateLiteral > *"] }],
     "key-spacing": ["error", {
       "beforeColon": false,
       "afterColon": true,
