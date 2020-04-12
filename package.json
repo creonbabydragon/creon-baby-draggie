@@ -5,8 +5,7 @@
   "main": "project.js",
   "scripts": {
     "build": "grunt build",
-    "serve": "grunt serve",
-    "test": "jasmine"
+    "serve": "grunt serve"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +33,6 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-postcss": "^0.9.0",
-    "jasmine": "^3.5.0",
     "path": "^0.12.7",
     "pixrem": "^5.0.0",
     "sass": "^1.23.3",
