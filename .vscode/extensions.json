@@ -1,8 +1,5 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "formulahendry.auto-rename-tag",
-    "pkief.material-icon-theme",
-    "wesbos.theme-cobalt2"
+    "dbaeumer.vscode-eslint"
   ]
 }
