@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/wishlist"
+  to = "https://www.amazon.com/hz/wishlist/ls/2V8TQ1ZDF58P?type=wishlist&filter=unpurchased&sort=custom"
+  status = 301
+  force = true
